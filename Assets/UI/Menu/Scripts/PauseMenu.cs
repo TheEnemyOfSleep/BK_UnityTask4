@@ -57,6 +57,15 @@ public class PauseMenu : MonoBehaviour
         _isPaused = true;
     }
 
+    public void GameFinished()
+    {
+        _successMenu.SetActive(true);
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+        _gameFinished = true;
+        Time.timeScale = 0f;
+    }
+
     public void ResumeGame()
     {
         _pauseMenu.SetActive(false);
@@ -69,15 +78,6 @@ public class PauseMenu : MonoBehaviour
     public void BackToMainMenu()
     {
         SceneManager.LoadScene("Menu");
-    }
-
-    public void GameFinished()
-    {
-        _successMenu.SetActive(true);
-        Cursor.lockState = CursorLockMode.Confined;
-        Cursor.visible = true;
-        _gameFinished = true;
-        Time.timeScale = 0f;
     }
 
     public void RestartLevel()

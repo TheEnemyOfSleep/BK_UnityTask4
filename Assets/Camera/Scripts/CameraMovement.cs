@@ -21,6 +21,7 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Attach CameraHolder to the CameraPosition
         transform.position = _cameraPosition.position;
     }
 }

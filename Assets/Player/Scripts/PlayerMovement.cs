@@ -76,6 +76,7 @@ public class PlayerMovement : MonoBehaviour
             _velocity.y = -2f;
         }
 
+        // Bound rotation to the Player Object
         transform.rotation = _orientation.rotation;
 
         Vector3 move = transform.right * x + transform.forward * z;

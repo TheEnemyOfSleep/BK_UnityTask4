@@ -49,6 +49,7 @@ public class MazeGenerator : MonoBehaviour
 
     private void GenerateMazeInstant(Vector2Int size)
     {
+        // The Depth-first search algorithm was created by user EvanatorM
         List<MazeNode> nodes = new List<MazeNode>();
         _nodePrefub.transform.localScale = new Vector3(_nodeSize, _nodeSize, _nodeSize);
         // Create nodes
